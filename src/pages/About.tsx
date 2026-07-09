@@ -13,6 +13,7 @@ export const About = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="w-full h-full object-cover object-[center_20%] opacity-50 scale-105 mix-blend-overlay"
           >
             <source src="/aboutusbanner.mp4" type="video/mp4" />

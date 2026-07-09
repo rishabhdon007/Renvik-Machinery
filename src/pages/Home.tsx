@@ -119,6 +119,7 @@ export const Home = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="w-full h-full object-cover object-center mix-blend-overlay opacity-60"
           >
             <source src="/heropage_bg.mp4" type="video/mp4" />
@@ -308,8 +309,7 @@ export const Home = () => {
                       <img
                         src={item.img}
                         alt={item.title}
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>

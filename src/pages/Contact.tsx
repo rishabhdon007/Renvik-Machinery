@@ -12,6 +12,7 @@ export const Contact = () => {
             loop 
             muted 
             playsInline 
+            preload="auto"
             className="w-full h-full object-cover opacity-40 mix-blend-overlay"
           >
             <source src="/Customer_support_team_video.mp4" type="video/mp4" />

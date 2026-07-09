@@ -61,6 +61,7 @@ export const Services = () => {
             loop 
             muted 
             playsInline 
+            preload="auto"
             className="w-full h-full object-cover opacity-40 mix-blend-overlay"
           >
             <source src="/service_page_banner.mp4" type="video/mp4" />

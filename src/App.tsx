@@ -1,19 +1,22 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Services } from "./pages/Services";
-import { ServiceDetails } from "./pages/ServiceDetails";
-import { Fleet } from "./pages/Fleet";
-import { Contact } from "./pages/Contact";
-import { Industries } from "./pages/Industries";
-import { Projects } from "./pages/Projects";
-import { Safety } from "./pages/Safety";
-import { Commitment } from "./pages/Commitment";
-import { Privacy } from "./pages/Privacy";
-import { Terms } from "./pages/Terms";
+
+// Lazy-loaded routes for code splitting
+const About = lazy(() => import("./pages/About").then((m) => ({ default: m.About })));
+const Services = lazy(() => import("./pages/Services").then((m) => ({ default: m.Services })));
+const ServiceDetails = lazy(() => import("./pages/ServiceDetails").then((m) => ({ default: m.ServiceDetails })));
+const Fleet = lazy(() => import("./pages/Fleet").then((m) => ({ default: m.Fleet })));
+const Contact = lazy(() => import("./pages/Contact").then((m) => ({ default: m.Contact })));
+const Industries = lazy(() => import("./pages/Industries").then((m) => ({ default: m.Industries })));
+const Projects = lazy(() => import("./pages/Projects").then((m) => ({ default: m.Projects })));
+const Safety = lazy(() => import("./pages/Safety").then((m) => ({ default: m.Safety })));
+const Commitment = lazy(() => import("./pages/Commitment").then((m) => ({ default: m.Commitment })));
+const Privacy = lazy(() => import("./pages/Privacy").then((m) => ({ default: m.Privacy })));
+const Terms = lazy(() => import("./pages/Terms").then((m) => ({ default: m.Terms })));
 
 function App() {
   return (
@@ -21,20 +24,22 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <main className="flex-grow pt-20">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:id" element={<ServiceDetails />} />
-          <Route path="/fleet" element={<Fleet />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/safety" element={<Safety />} />
-          <Route path="/commitment" element={<Commitment />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-screen bg-primary flex items-center justify-center"><div className="w-8 h-8 border-4 border-secondary-container border-t-transparent rounded-full animate-spin"></div></div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:id" element={<ServiceDetails />} />
+            <Route path="/fleet" element={<Fleet />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/safety" element={<Safety />} />
+            <Route path="/commitment" element={<Commitment />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       
