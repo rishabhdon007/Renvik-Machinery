@@ -2,48 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useSpring, useInView } from "framer-motion";
 
-const TypewriterText = ({ text, speed = 50, delay = 0, loop = true }: { text: string, speed?: number, delay?: number, loop?: boolean }) => {
-  const [displayText, setDisplayText] = useState("");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px" });
-  
-  useEffect(() => {
-    if (!isInView) return;
-    
-    let isMounted = true;
-    let timer: ReturnType<typeof setInterval>;
-    
-    const startTyping = () => {
-      if (!isMounted) return;
-      let i = 0;
-      setDisplayText("");
-      
-      timer = setInterval(() => {
-        if (i < text.length) {
-          setDisplayText(text.substring(0, i + 1));
-          i++;
-        } else {
-          clearInterval(timer);
-          if (loop) {
-            setTimeout(() => {
-              if (isMounted) startTyping();
-            }, 3000); // Wait 3 seconds before repeating
-          }
-        }
-      }, speed);
-    };
-
-    const startTimeout = setTimeout(startTyping, delay);
-    
-    return () => {
-      isMounted = false;
-      clearTimeout(startTimeout);
-      if (timer) clearInterval(timer);
-    };
-  }, [text, isInView, speed, delay, loop]);
-
-  return <span ref={ref}>{displayText}</span>;
-};
+import { TypewriterText } from "./AnimatedElements";
 import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
@@ -108,7 +67,7 @@ export const Navbar = () => {
                 <span className="font-headline text-lg lg:text-xl font-bold text-primary/80 tracking-tight">Machinery Rental</span>
               </div>
               <span className="text-[9px] lg:text-[10px] font-bold uppercase tracking-[0.15em] text-primary/50 mt-1">
-                <TypewriterText text="Heavy Equipment Solutions" delay={500} />
+                <TypewriterText text="Heavy Equipment Solutions" delay={500} loop={true} />
               </span>
             </div>
           </Link>
@@ -187,7 +146,7 @@ export const Navbar = () => {
                     <span className="font-headline text-lg font-bold text-primary/80 tracking-tight">Rental</span>
                   </div>
                   <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-primary/50 mt-1">
-                    <TypewriterText text="Heavy Equipment" delay={500} />
+                    <TypewriterText text="Heavy Equipment" delay={500} loop={true} />
                   </span>
                 </div>
               </Link>

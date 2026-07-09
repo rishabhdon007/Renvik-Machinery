@@ -1,31 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { TypewriterText } from "../components/AnimatedElements";
 
-const TypewriterText = ({ text, speed = 50 }: { text: string, speed?: number }) => {
-  const [displayText, setDisplayText] = useState("");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
-  useEffect(() => {
-    if (!isInView) return;
-    
-    let i = 0;
-    setDisplayText("");
-    const timer = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText((prev) => prev + text.charAt(i));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
-    }, speed);
-    
-    return () => clearInterval(timer);
-  }, [text, isInView, speed]);
 
-  return <span ref={ref}>{displayText}</span>;
-};
 
 export const Services = () => {
   const services = [

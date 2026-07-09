@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TypewriterText } from "../components/AnimatedElements";
 
 export const Contact = () => {
   return (
@@ -40,7 +41,7 @@ export const Contact = () => {
           >
             <h2 className="text-secondary-container font-bold tracking-widest text-sm uppercase mb-4 block">CONNECT WITH RENVIK</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-black text-white tracking-tight leading-[1.1] max-w-4xl">
-              GET IN TOUCH WITH OUR <span className="text-secondary-container">RENTAL EXPERTS</span>
+              <TypewriterText text="GET IN TOUCH WITH OUR " /><span className="text-secondary-container"><TypewriterText text="RENTAL EXPERTS" delay={1200} /></span>
             </h1>
           </motion.div>
 

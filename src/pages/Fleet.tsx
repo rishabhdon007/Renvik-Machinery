@@ -1,5 +1,5 @@
-
 import { motion } from "framer-motion";
+import { TypewriterText } from "../components/AnimatedElements";
 
 export const Fleet = () => {
   const equipment = [
@@ -56,8 +56,8 @@ export const Fleet = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl md:text-6xl lg:text-7xl font-headline font-extrabold text-white mb-8 leading-[1.05] tracking-tight"
             >
-              Modern Machinery for<br className="hidden lg:block"/>
-              Industrial Demands.
+              <TypewriterText text="Modern Machinery for" /><br className="hidden lg:block"/>
+              <TypewriterText text="Industrial Demands." delay={1000} />
             </motion.h1>
             
             <motion.p 

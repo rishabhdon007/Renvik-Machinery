@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { TypewriterText, AnimatedCounter } from "../components/AnimatedElements";
 import { motion } from "framer-motion";
 
 export const About = () => {
@@ -41,7 +42,7 @@ export const About = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl md:text-6xl lg:text-[5.5rem] font-headline font-black text-white mb-8 tracking-tight leading-[1.05]"
             >
-              About Us
+              <TypewriterText text="About Us" />
             </motion.h1>
             
             <motion.p
@@ -253,7 +254,7 @@ export const About = () => {
                 viewport={{ once: true }}
                 className="absolute -bottom-4 lg:bottom-8 left-4 lg:left-6 bg-white text-[#02182b] px-6 py-4 lg:px-8 lg:py-6 rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] z-10"
               >
-                <div className="text-4xl lg:text-5xl font-headline font-extrabold leading-none">4+</div>
+                <div className="text-4xl lg:text-5xl font-headline font-extrabold leading-none"><AnimatedCounter target={4} duration={2} />+</div>
                 <div className="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-[#02182b]/60 mt-2">Core Advantages</div>
               </motion.div>
             </motion.div>
@@ -329,14 +330,14 @@ export const About = () => {
       <div className="w-full py-20 px-5 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -150 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.2 }}
             className="order-2 lg:order-1"
           >
             <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">SAFETY & QUALITY</span>
-            <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6">Core Principles of Our Business</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6"><TypewriterText text="Core Principles of Our Business" /></h2>
             
             <div className="space-y-4 font-body text-lg text-on-surface-variant leading-relaxed">
               <p>
@@ -352,10 +353,10 @@ export const About = () => {
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 150 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.2 }}
             className="order-1 lg:order-2"
           >
             <div className="rounded-[2.5rem] overflow-hidden shadow-xl aspect-video relative">
@@ -370,10 +371,10 @@ export const About = () => {
       <div className="w-full py-20 px-5 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-outline-variant/30">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -150 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.2 }}
             className="relative"
           >
             <div className="rounded-[2.5rem] overflow-hidden shadow-xl aspect-video relative">
@@ -383,13 +384,13 @@ export const About = () => {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 150 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.2 }}
           >
             <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">OUR COMMITMENT</span>
-            <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6">Measuring Success Through Relationships</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6"><TypewriterText text="Measuring Success Through Relationships" /></h2>
             
             <div className="space-y-4 font-body text-lg text-on-surface-variant leading-relaxed">
               <p>

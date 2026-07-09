@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { TypewriterText, AnimatedCounter } from "../components/AnimatedElements";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 
 const testimonials = [
@@ -85,63 +86,7 @@ const testimonials = [
   }
 ];
 
-const TypewriterText = ({ text, speed = 50, delay = 0 }: { text: string, speed?: number, delay?: number }) => {
-  const [displayText, setDisplayText] = useState("");
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px" });
-  
-  useEffect(() => {
-    if (!isInView) return;
-    
-    let timer: ReturnType<typeof setInterval>;
-    const startTimeout = setTimeout(() => {
-
-      let i = 0;
-      setDisplayText("");
-      timer = setInterval(() => {
-        if (i < text.length) {
-          setDisplayText((prev) => prev + text.charAt(i));
-          i++;
-        } else {
-          clearInterval(timer);
-        }
-      }, speed); // Typing speed
-    }, delay);
-    
-    return () => {
-      clearTimeout(startTimeout);
-      if (timer) clearInterval(timer);
-    };
-  }, [text, isInView, speed, delay]);
-
-  return <span ref={ref}>{displayText}</span>;
-};
-
-const AnimatedCounter = ({ target, duration = 2 }: { target: number, duration?: number }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px" });
-
-  useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const increment = target / (duration * 60);
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-          setCount(target);
-          clearInterval(timer);
-        } else {
-          setCount(Math.ceil(start));
-        }
-      }, 1000 / 60);
-      return () => clearInterval(timer);
-    }
-  }, [isInView, target, duration]);
-
-  return <span ref={ref}>{count}</span>;
-};
 
 const servicesList = [
   { title: "Monthly Rental", icon: "📅", img: "/images/Foto1.webp", cat: "FLEXIBLE", desc: "Short-term equipment rental tailored for immediate project requirements.", link: "/services/monthly-rental" },
@@ -320,7 +265,7 @@ export const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8 reveal-on-scroll">
             <div className="max-w-2xl">
               <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Comprehensive Solutions</span>
-              <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-6">Our Core Offerings</h2>
+              <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-6"><TypewriterText text="Our Core Offerings" /></h2>
               <p className="text-on-surface-variant text-lg leading-relaxed">
                 Providing professional rental services for projects of every size, from single units to entire fleets.
               </p>
