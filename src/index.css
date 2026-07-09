@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #18335c; /* Updated to the new deep blue */
+  --color-primary-container: #0a346c;
+  --color-secondary: #8d4f00;
+  --color-secondary-container: #fd9412;
+  --color-secondary-fixed: #ffdcc0;
+  --color-surface: #f0f2ff; /* Very light blue-lavender */
+  --color-on-surface: #18335c;
+  --color-surface-container-low: #e8eafc; /* Lavender Blue */
+  --color-surface-container-lowest: #f8f9ff; /* Frost */
+  --color-surface-container-high: #dee1f7;
+  --color-surface-container-highest: #d1d5f2;
+  --color-outline-variant: #c4c6d1;
+  --color-on-secondary-fixed-variant: #6b3b00;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #7f9edd;
+  --color-on-secondary-fixed: #2d1600;
+  --color-tertiary-fixed: #d4e3ff;
+  --color-on-tertiary-fixed-variant: #274872;
+  --color-primary-fixed-dim: #acc7ff;
+  --color-secondary-fixed-dim: #ffb875;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Keyboard focus: high-contrast ring on primary interactive elements */
+  :where(a, button, summary, [role="tab"], [role="button"]):focus {
+    outline: none;
+  }
+  :where(a, button, summary, [role="tab"], [role="button"]):focus-visible {
+    outline: 2px solid var(--color-secondary-container);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+
+  :where(a, button):focus-visible:is(.rounded-2xl, .rounded-xl, .rounded-full, .rounded-\[2rem\]) {
+    border-radius: inherit;
+    outline-offset: 4px;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0a346c;
+  }
+}
+
+.reveal-on-scroll {
+  animation: reveal linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 30%;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
