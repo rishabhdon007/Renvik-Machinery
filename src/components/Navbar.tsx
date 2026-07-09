@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll, useSpring, useInView } from "framer
 
 const TypewriterText = ({ text, speed = 50, delay = 0, loop = true }: { text: string, speed?: number, delay?: number, loop?: boolean }) => {
   const [displayText, setDisplayText] = useState("");
-  const [isStarted, setIsStarted] = useState(delay === 0);
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "0px" });
   
@@ -12,11 +11,10 @@ const TypewriterText = ({ text, speed = 50, delay = 0, loop = true }: { text: st
     if (!isInView) return;
     
     let isMounted = true;
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
     
     const startTyping = () => {
       if (!isMounted) return;
-      setIsStarted(true);
       let i = 0;
       setDisplayText("");
       

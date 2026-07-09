@@ -87,17 +87,16 @@ const testimonials = [
 
 const TypewriterText = ({ text, speed = 50, delay = 0 }: { text: string, speed?: number, delay?: number }) => {
   const [displayText, setDisplayText] = useState("");
-  const [isStarted, setIsStarted] = useState(delay === 0);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px" });
-  const isComplete = displayText.length === text.length && isStarted;
   
   useEffect(() => {
     if (!isInView) return;
     
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
     const startTimeout = setTimeout(() => {
-      setIsStarted(true);
+
       let i = 0;
       setDisplayText("");
       timer = setInterval(() => {

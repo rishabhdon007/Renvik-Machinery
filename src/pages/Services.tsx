@@ -6,7 +6,6 @@ const TypewriterText = ({ text, speed = 50 }: { text: string, speed?: number }) 
   const [displayText, setDisplayText] = useState("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const isComplete = displayText.length === text.length;
   
   useEffect(() => {
     if (!isInView) return;
