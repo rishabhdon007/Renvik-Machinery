@@ -144,46 +144,46 @@ export const Contact = () => {
             </div>
 
             {/* Call Us Directly */}
-            <a href="tel:+971555853160" className="group flex items-center justify-between p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all">
-              <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <a href="tel:+971555853160" className="group flex items-center justify-between p-4 sm:p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all gap-2">
+              <div className="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 </div>
-                <div>
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Call Us Directly</div>
-                  <div className="text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors">+971 555853160</div>
-                  <div className="text-sm font-body text-on-surface-variant mt-1">Claudio Necchi: 0563874519</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant break-words">Call Us Directly</div>
+                  <div className="text-base sm:text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors break-words">+971 555853160</div>
+                  <div className="text-xs sm:text-sm font-body text-on-surface-variant mt-1 break-words">Claudio Necchi: 0563874519</div>
                 </div>
               </div>
-              <div className="text-primary group-hover:translate-x-1 transition-transform">→</div>
+              <div className="text-primary group-hover:translate-x-1 transition-transform shrink-0 ml-1 sm:ml-3">→</div>
             </a>
 
             {/* Email Us */}
-            <a href="mailto:info@renvikservices.com" className="group flex items-center justify-between p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all">
-              <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <a href="mailto:info@renvikservices.com" className="group flex items-center justify-between p-4 sm:p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all gap-2">
+              <div className="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
-                <div>
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Email Our Team</div>
-                  <div className="text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors">info@renvikservices.com</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant break-words">Email Our Team</div>
+                  <div className="text-base sm:text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors break-words">info@renvikservices.com</div>
                 </div>
               </div>
-              <div className="text-primary group-hover:translate-x-1 transition-transform">→</div>
+              <div className="text-primary group-hover:translate-x-1 transition-transform shrink-0 ml-1 sm:ml-3">→</div>
             </a>
 
             {/* Visit HQ */}
-            <a href="https://maps.google.com/?q=Iris+Bay+Tower,+Business+Bay,+Dubai" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all">
-              <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <a href="https://maps.google.com/?q=Iris+Bay+Tower,+Business+Bay,+Dubai" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between p-4 sm:p-6 bg-white rounded-[1.5rem] border border-outline-variant/30 shadow-sm hover:shadow-md transition-all gap-2">
+              <div className="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#02182b] rounded-full flex items-center justify-center text-white shrink-0 group-hover:bg-secondary-container transition-colors">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
-                <div>
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Visit Headquarters</div>
-                  <div className="text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors">Business Bay, Dubai</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant break-words">Visit Headquarters</div>
+                  <div className="text-base sm:text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors break-words">Business Bay, Dubai</div>
                 </div>
               </div>
-              <div className="text-primary group-hover:translate-x-1 transition-transform">→</div>
+              <div className="text-primary group-hover:translate-x-1 transition-transform shrink-0 ml-1 sm:ml-3">→</div>
             </a>
             
             {/* Google Maps Embed */}
