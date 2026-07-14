@@ -24,7 +24,7 @@ export const About = () => {
           <div className="absolute bottom-1/4 -left-1/4 h-[440px] w-[440px] rounded-full bg-secondary-container/15 blur-[90px] mix-blend-screen pointer-events-none" />
           <div className="pointer-events-none absolute bottom-0 left-0 z-20 h-[12%] w-full bg-gradient-to-t from-surface via-surface/85 to-transparent" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-30">
           <div className="max-w-4xl">
             <motion.div
@@ -36,8 +36,8 @@ export const About = () => {
                 OUR COMPANY
               </span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -45,7 +45,7 @@ export const About = () => {
             >
               <TypewriterText text="About Us" />
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -62,169 +62,170 @@ export const About = () => {
       <section className="w-full bg-surface relative z-40 -mt-16 rounded-t-[3rem]">
         <div className="w-full pt-28 pb-20 px-5 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-start relative">
-          
-          {/* Left Column: Image & Logo (Sticky) */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="lg:w-5/12 sticky top-32 hidden lg:block"
-          >
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/20 relative aspect-[4/5] bg-white">
-              <img 
-                src="/images/Foto3.webp" 
-                alt="Industrial Operations" 
-                className="w-full h-full object-cover opacity-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
-              
-              <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl flex flex-col items-center text-center border border-white/50">
-                <img src="/images/logo.webp" alt="Renvik Logo" className="w-32 md:w-40 h-auto mb-4" />
-                <h3 className="font-headline font-black text-2xl text-primary leading-tight">RENVIK</h3>
-                <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mt-1">Machinery Rental Services</p>
-              </div>
-            </div>
-            
-            {/* Decorative dots */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[radial-gradient(circle,rgba(24,51,92,0.1)_2px,transparent_2px)] bg-[length:12px_12px] -z-10 rounded-full" />
-          </motion.div>
 
-          {/* Mobile Image (Non-sticky) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px" }}
-            transition={{ duration: 0.8 }}
-            className="lg:hidden w-full relative"
-          >
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/20 relative aspect-[4/5] bg-white">
-              <img src="/images/Foto3.webp" alt="Industrial Operations" className="w-full h-full object-cover opacity-90" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl flex flex-col items-center text-center border border-white/50">
-                <img src="/images/logo.webp" alt="Renvik Logo" className="w-24 h-auto mb-2" />
-                <h3 className="font-headline font-black text-xl text-primary leading-tight">RENVIK</h3>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column: Scrolling Text Content */}
-          <div className="lg:w-7/12 flex flex-col gap-24 lg:gap-32 pb-12">
-            
-            {/* Section 1 */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col justify-center lg:min-h-[50vh]"
+            {/* Left Column: Image & Logo (Sticky) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="lg:w-5/12 sticky top-32 hidden lg:block"
             >
-              <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">Our Story</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary mb-8 leading-tight">
-                Building Long-Term <br/><span className="text-secondary-container">Industrial Partnerships</span>
-              </h2>
-              
-              <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
-                <p>
-                  Renvik Machinery Rental Services was established to provide professional heavy equipment rental services to industrial customers requiring reliability, flexibility and operational excellence.
-                </p>
-                <p>
-                  Headquartered in Iris Bay Tower, Business Bay, Dubai, our company combines the strategic advantages of the United Arab Emirates with the capability to support customers operating throughout the region and across strategic international markets.
-                </p>
-                
-                <div className="pl-6 border-l-4 border-secondary-container py-2 my-8 bg-primary/[0.02] rounded-r-2xl pr-4">
-                  <p className="font-bold text-primary text-xl italic leading-snug">
-                    "Our ambition is to establish long-term partnerships based on trust, professionalism, reliability and consistent service excellence."
-                  </p>
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/20 relative aspect-[4/5] bg-white">
+                <img
+                  src="/images/Foto3.webp"
+                  alt="Industrial Operations"
+                  className="w-full h-full object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+
+                <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl flex flex-col items-center text-center border border-white/50">
+                  {/* <img src="/images/logo.webp" alt="Renvik Logo" className="w-32 md:w-40 h-auto mb-4" /> */}
+                  <h3 className="font-headline font-black text-2xl text-primary leading-tight">RENVIK</h3>
+                  <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mt-1">Machinery Rental Services</p>
+                </div>
+              </div>
+
+              {/* Decorative dots */}
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[radial-gradient(circle,rgba(24,51,92,0.1)_2px,transparent_2px)] bg-[length:12px_12px] -z-10 rounded-full" />
+            </motion.div>
+
+            {/* Mobile Image (Non-sticky) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ duration: 0.8 }}
+              className="lg:hidden w-full relative"
+            >
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-outline-variant/20 relative aspect-[4/5] bg-white">
+                <img src="/images/Foto3.webp" alt="Industrial Operations" className="w-full h-full object-cover opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl flex flex-col items-center text-center border border-white/50">
+                  <h3 className="font-headline font-black text-xl text-primary leading-tight">
+                    <span className="text-sm lowercase">P</span>R<span className="text-sm lowercase">emium</span> E<span className="text-sm lowercase">quipment</span> N<span className="text-sm lowercase">etworks</span> &amp; V<span className="text-sm lowercase">ersatile</span> I<span className="text-sm lowercase">ndustrial</span> <span className="text-sm lowercase">Wor</span>K
+                  </h3>
                 </div>
               </div>
             </motion.div>
 
-            {/* Section 1.5: Industries We Serve */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col justify-center lg:min-h-[50vh]"
-            >
-              <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">Industries We Serve</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary mb-8 leading-tight">
-                Supporting Major <br/><span className="text-secondary-container">Industrial Sectors</span>
-              </h2>
-              
-              <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed mb-8">
-                <p>
-                  Renvik provides equipment rental solutions for customers operating in:
-                </p>
-              </div>
+            {/* Right Column: Scrolling Text Content */}
+            <div className="lg:w-7/12 flex flex-col gap-24 lg:gap-32 pb-12">
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 font-headline font-bold text-primary/90">
-                {[
-                  "Oil & Gas", "Construction", "Infrastructure", "Logistics",
-                  "Heavy Transportation", "Mining", "Marine & Ports", "Power Generation",
-                  "Renewable Energy", "Industrial Plants", "Government Projects", 
-                  "EPC Contractors", "Manufacturing", "Engineering Companies"
-                ].map((industry, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-outline-variant/20 hover:border-secondary-container/50 transition-colors">
-                    <div className="w-2 h-2 rounded-full bg-secondary-container flex-shrink-0" />
-                    <span className="text-sm md:text-base">{industry}</span>
+              {/* Section 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col justify-center lg:min-h-[50vh]"
+              >
+                <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">Our Story</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary mb-8 leading-tight">
+                  Building Long-Term <br /><span className="text-secondary-container">Industrial Partnerships</span>
+                </h2>
+
+                <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
+                  <p>
+                    Renvik Machinery Rental Services was established to provide professional heavy equipment rental services to industrial customers requiring reliability, flexibility and operational excellence.
+                  </p>
+                  <p>
+                    Headquartered in Iris Bay Tower, Business Bay, Dubai, our company combines the strategic advantages of the United Arab Emirates with the capability to support customers operating throughout the region and across strategic international markets.
+                  </p>
+
+                  <div className="pl-6 border-l-4 border-secondary-container py-2 my-8 bg-primary/[0.02] rounded-r-2xl pr-4">
+                    <p className="font-bold text-primary text-xl italic leading-snug">
+                      "Our ambition is to establish long-term partnerships based on trust, professionalism, reliability and consistent service excellence."
+                    </p>
                   </div>
-                ))}
-              </div>
-            </motion.div>
+                </div>
+              </motion.div>
 
-            {/* Section 2 */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col justify-center lg:min-h-[50vh]"
-            >
-              <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-8 leading-tight">
-                Global Reach & Expertise
-              </h2>
-              <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
-                <p>
-                  While serving projects across the UAE, Renvik also supports industrial developments throughout strategic markets in Africa and the Middle East, providing heavy equipment rental solutions tailored to the specific operational requirements of each customer.
-                </p>
-                <p>
-                  Our management team combines experience in heavy transportation, industrial logistics, construction support and project operations. This knowledge allows us to understand complex operational challenges and develop customized rental solutions that maximize efficiency while minimizing operational risk.
-                </p>
-                <p className="font-medium text-primary">
-                  Every project is different. Every customer has different priorities. For this reason, we believe every rental agreement should be tailored to the customer’s specific operational requirements rather than following a standard commercial model.
-                </p>
-              </div>
-              
-              <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-primary px-8 font-headline font-bold text-white transition-all shadow-lg hover:bg-[#142a4f] hover:shadow-xl hover:-translate-y-1">
-                  Get in Touch
-                </Link>
-                <Link to="/fleet" className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-white border-2 border-primary/10 px-8 font-headline font-bold text-primary transition-all hover:bg-primary/5 hover:border-primary/20">
-                  Explore Our Fleet
-                </Link>
-              </div>
-            </motion.div>
+              {/* Section 1.5: Industries We Serve */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col justify-center lg:min-h-[50vh]"
+              >
+                <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">Industries We Serve</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-primary mb-8 leading-tight">
+                  Supporting Major <br /><span className="text-secondary-container">Industrial Sectors</span>
+                </h2>
 
+                <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed mb-8">
+                  <p>
+                    Renvik provides equipment rental solutions for customers operating in:
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 font-headline font-bold text-primary/90">
+                  {[
+                    "Oil & Gas", "Construction", "Infrastructure", "Logistics",
+                    "Heavy Transportation", "Mining", "Marine & Ports", "Power Generation",
+                    "Renewable Energy", "Industrial Plants", "Government Projects",
+                    "EPC Contractors", "Manufacturing", "Engineering Companies"
+                  ].map((industry, index) => (
+                    <div key={index} className="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-outline-variant/20 hover:border-secondary-container/50 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-secondary-container flex-shrink-0" />
+                      <span className="text-sm md:text-base">{industry}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Section 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col justify-center lg:min-h-[50vh]"
+              >
+                <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-8 leading-tight">
+                  Global Reach & Expertise
+                </h2>
+                <div className="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
+                  <p>
+                    While serving projects across the UAE, Renvik also supports industrial developments throughout strategic markets in Africa and the Middle East, providing heavy equipment rental solutions tailored to the specific operational requirements of each customer.
+                  </p>
+                  <p>
+                    Our management team combines experience in heavy transportation, industrial logistics, construction support and project operations. This knowledge allows us to understand complex operational challenges and develop customized rental solutions that maximize efficiency while minimizing operational risk.
+                  </p>
+                  <p className="font-medium text-primary">
+                    Every project is different. Every customer has different priorities. For this reason, we believe every rental agreement should be tailored to the customer’s specific operational requirements rather than following a standard commercial model.
+                  </p>
+                </div>
+
+                <div className="mt-12 flex flex-col sm:flex-row gap-4">
+                  <Link to="/contact" className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-primary px-8 font-headline font-bold text-white transition-all shadow-lg hover:bg-[#142a4f] hover:shadow-xl hover:-translate-y-1">
+                    Get in Touch
+                  </Link>
+                  <Link to="/fleet" className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-white border-2 border-primary/10 px-8 font-headline font-bold text-primary transition-all hover:bg-primary/5 hover:border-primary/20">
+                    Explore Our Fleet
+                  </Link>
+                </div>
+              </motion.div>
+
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* Why Renvik Section - Phinura Style */}
+      {/* Why Renvik Section - Phinura Style */}
       <div className="w-full bg-[#02182b] py-24 px-5 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Decorative background map-like pattern */}
-        <div 
+        <div
           className="absolute inset-0 z-0 opacity-10 pointer-events-none"
-          style={{ 
+          style={{
             backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
           }}
         />
-        
+
         <div className="absolute -left-32 top-1/4 h-64 w-64 rounded-full bg-secondary-container/10 blur-[80px] pointer-events-none" />
         <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-white/5 blur-[80px] pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -289,7 +290,7 @@ export const About = () => {
                   { title: "Long-term partnership approach" },
                   { title: "Responsive customer service" }
                 ].map((feature, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -309,7 +310,7 @@ export const About = () => {
               <p className="text-white/80 font-body text-base leading-relaxed mt-10 mb-8">
                 Our objective is to become a trusted extension of our customers’ operations by providing equipment that performs when it matters most.
               </p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +331,7 @@ export const About = () => {
       {/* Safety & Quality Section */}
       <div className="w-full py-20 px-5 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -150 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -339,7 +340,7 @@ export const About = () => {
           >
             <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">SAFETY & QUALITY</span>
             <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6"><TypewriterText text="Core Principles of Our Business" /></h2>
-            
+
             <div className="space-y-4 font-body text-lg text-on-surface-variant leading-relaxed">
               <p>
                 Every piece of equipment supplied by Renvik undergoes regular inspection, preventive maintenance and operational testing before delivery.
@@ -352,8 +353,8 @@ export const About = () => {
               </p>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: 150 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -371,7 +372,7 @@ export const About = () => {
       {/* Our Commitment Section */}
       <div className="w-full py-20 px-5 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-outline-variant/30">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -150 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -384,7 +385,7 @@ export const About = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 150 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -392,7 +393,7 @@ export const About = () => {
           >
             <span className="text-secondary-container font-bold tracking-widest text-xs uppercase mb-4 block">OUR COMMITMENT</span>
             <h2 className="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-6"><TypewriterText text="Measuring Success Through Relationships" /></h2>
-            
+
             <div className="space-y-4 font-body text-lg text-on-surface-variant leading-relaxed">
               <p>
                 At Renvik, we measure success through the long-term relationships we build with our customers. Our commitment extends beyond equipment rental.

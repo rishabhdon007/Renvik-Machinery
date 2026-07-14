@@ -202,8 +202,8 @@ export const Home = () => {
                       <div className="w-10 h-10 rounded-full border-2 border-primary bg-gray-500 overflow-hidden"><img src="/images/Foto3.webp" alt="Client" loading="lazy" decoding="async" className="w-full h-full object-cover" /></div>
                     </div>
                     <div className="text-right">
-                      <div className="font-headline font-black text-2xl text-white"><AnimatedCounter target={500} />+</div>
-                      <div className="text-[10px] uppercase tracking-wider text-white/70 font-bold">Successful Projects</div>
+                      <div className="font-headline font-black text-2xl text-white"><AnimatedCounter target={100} />%</div>
+                      <div className="text-[10px] uppercase tracking-wider text-white/70 font-bold">Client Satisfaction</div>
                     </div>
                   </div>
                   
@@ -224,7 +224,7 @@ export const Home = () => {
                       </div>
                       <div>
                         <h3 className="font-headline font-bold text-white mb-1">Professional Technical Support</h3>
-                        <p className="text-white/60 text-sm font-body">24/7 dedicated maintenance and operational assistance.</p>
+                        <p className="text-white/60 text-sm font-body">Dedicated maintenance and operational assistance.</p>
                       </div>
                     </div>
                     

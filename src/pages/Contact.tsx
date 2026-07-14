@@ -136,9 +136,6 @@ export const Contact = () => {
               <img src="/images/customer_support.webp" alt="Dedicated Customer Support" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#02182b]/80 via-[#02182b]/30 to-transparent"></div>
               <div className="absolute bottom-5 left-6 right-6">
-                <div className="text-secondary-container text-xs font-bold tracking-widest uppercase mb-1 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> 24/7 Availability
-                </div>
                 <div className="text-white font-headline font-bold text-xl">Dedicated Support Team</div>
               </div>
             </div>
@@ -152,7 +149,6 @@ export const Contact = () => {
                 <div className="min-w-0">
                   <div className="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant break-words">Call Us Directly</div>
                   <div className="text-base sm:text-xl font-headline font-bold text-primary group-hover:text-secondary-container transition-colors break-words">+971 555853160</div>
-                  <div className="text-xs sm:text-sm font-body text-on-surface-variant mt-1 break-words">Claudio Necchi: 0563874519</div>
                 </div>
               </div>
               <div className="text-primary group-hover:translate-x-1 transition-transform shrink-0 ml-1 sm:ml-3">→</div>

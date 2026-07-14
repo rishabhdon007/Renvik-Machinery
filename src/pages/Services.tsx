@@ -6,44 +6,44 @@ import { TypewriterText } from "../components/AnimatedElements";
 
 export const Services = () => {
   const services = [
-    { 
-      title: "Monthly Rental", 
+    {
+      title: "Monthly Rental",
       desc: "Flexible month-to-month equipment rentals for short-term operational requirements.",
       img: "/images/Foto1.webp",
       category: "SHORT-TERM"
     },
-    { 
-      title: "Long-Term Rental", 
+    {
+      title: "Long-Term Rental",
       desc: "Cost-effective, reliable machinery leasing for extended durations.",
       img: "/images/Foto2.webp",
       category: "LONG-TERM"
     },
-    { 
-      title: "Project-Based Rental", 
+    {
+      title: "Project-Based Rental",
       desc: "Complete fleet solutions specifically scaled to your project timeline.",
       img: "/images/Foto3.webp",
       category: "PROJECT"
     },
-    { 
-      title: "Fleet Rental Agreements", 
+    {
+      title: "Fleet Rental Agreements",
       desc: "Comprehensive equipment supply contracts for major industrial operations.",
       img: "/images/Foto4.webp",
       category: "CONTRACT"
     },
-    { 
-      title: "Dedicated Equipment", 
+    {
+      title: "Dedicated Equipment",
       desc: "Specialized machinery reserved entirely for your site's exclusive use.",
       img: "/images/Foto6.webp",
       category: "DEDICATED"
     },
-    { 
-      title: "Fleet Expansion Programs", 
+    {
+      title: "Fleet Expansion Programs",
       desc: "Scale your capacity without the capital expenditure of purchasing new assets.",
       img: "/images/Foto7.webp",
       category: "SCALING"
     },
-    { 
-      title: "Cross-Border Support", 
+    {
+      title: "Cross-Border Support",
       desc: "Reliable equipment mobilization across strategic markets in the Middle East and Africa.",
       img: "/images/ourbanner.webp",
       category: "INTERNATIONAL"
@@ -55,11 +55,11 @@ export const Services = () => {
       {/* Hero Header matching Phinura style */}
       <section className="relative pt-32 pb-48 md:pt-48 md:pb-60 bg-primary overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             preload="auto"
             className="w-full h-full object-cover opacity-40 mix-blend-overlay"
           >
@@ -84,18 +84,18 @@ export const Services = () => {
                 OUR EXPERTISE
               </span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl md:text-6xl lg:text-7xl font-headline font-extrabold text-white mb-8 leading-[1.05] tracking-tight"
             >
-              P<span className="text-secondary-container">R</span>emium <span className="text-secondary-container">E</span>quipment <span className="text-secondary-container">N</span>etworks &amp; <br className="hidden lg:block"/>
-              <span className="text-secondary-container">V</span>ersatile <span className="text-secondary-container">I</span>ndustrial Wor<span className="text-secondary-container">K</span>.
+              P<span className="text-secondary-container">r</span>emium <span className="text-secondary-container">E</span>quipment <span className="text-secondary-container">N</span>etworks &amp; <br className="hidden lg:block" />
+              <span className="text-secondary-container">V</span>ersatile <span className="text-secondary-container">I</span>ndustrial Wor<span className="text-secondary-container">k</span>.
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -104,7 +104,7 @@ export const Services = () => {
               Renvik provides professional rental services tailored for projects of every size. Whether you require a single unit or an entire fleet, we deliver operational excellence.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -125,7 +125,7 @@ export const Services = () => {
       {/* Service Grid matching Phinura style */}
       <section className="bg-surface pb-32 relative z-40 -mt-16 rounded-t-[3rem]">
         <div className="max-w-7xl mx-auto px-6 pt-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -144,7 +144,7 @@ export const Services = () => {
               Service Areas
             </div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, i) => (
               <Link
