@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="w-full bg-surface">
+    <div className="w-full bg-surface overflow-x-hidden">
       {/* Hero Header */}
       <section className="relative pt-32 pb-48 md:pt-48 md:pb-60 bg-primary overflow-hidden">
         <div className="absolute inset-0 z-0">
