@@ -101,9 +101,8 @@ export const About = () => {
                 <img src="/images/Foto3.webp" alt="Industrial Operations" className="w-full h-full object-cover opacity-90" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl flex flex-col items-center text-center border border-white/50">
-                  <h3 className="font-headline font-black text-xl text-primary leading-tight">
-                    <span className="text-sm lowercase">P</span>R<span className="text-sm lowercase">emium</span> E<span className="text-sm lowercase">quipment</span> N<span className="text-sm lowercase">etworks</span> &amp; V<span className="text-sm lowercase">ersatile</span> I<span className="text-sm lowercase">ndustrial</span> <span className="text-sm lowercase">Wor</span>K
-                  </h3>
+                  <h3 className="font-headline font-black text-xl text-primary leading-tight">RENVIK</h3>
+                  <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mt-1">Machinery Rental Services</p>
                 </div>
               </div>
             </motion.div>
