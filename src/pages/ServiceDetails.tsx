@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
+import {
   CheckCircle2, PhoneCall, ArrowRight, ShieldCheck,
   Calendar, Zap, Wrench, TrendingUp,
   DollarSign, Wallet, Headphones, RefreshCw,
@@ -129,7 +129,7 @@ export const ServiceDetails = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -139,11 +139,11 @@ export const ServiceDetails = () => {
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-white text-sm font-semibold tracking-wide uppercase">Renvik Services</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white font-headline leading-tight mb-6">
               {service.title}
             </h1>
-            
+
             <p className="text-xl text-outline-variant max-w-2xl font-light">
               {service.subtitle}
             </p>
@@ -164,7 +164,7 @@ export const ServiceDetails = () => {
               Overview
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto mb-8" />
-            
+
             <p className="text-lg md:text-xl text-secondary leading-relaxed mb-12">
               {service.description}
             </p>
@@ -176,9 +176,9 @@ export const ServiceDetails = () => {
       <section className="py-24 bg-[#0a2540] relative overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/ourbanner.webp" 
-            alt="Background" 
+          <img
+            src="/images/ourbanner.webp"
+            alt="Background"
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover opacity-20 mix-blend-overlay"
@@ -186,10 +186,10 @@ export const ServiceDetails = () => {
           <div className="absolute inset-0 bg-[#0a2540]/60" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a2540] via-[#0a2540]/80 to-transparent" />
         </div>
-        
+
         {/* Subtle background texture/pattern */}
         <div className="absolute inset-0 opacity-20 z-0 mix-blend-overlay" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-        
+
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -201,41 +201,42 @@ export const ServiceDetails = () => {
             <div>
               <div className="text-blue-300 font-bold text-sm tracking-widest uppercase mb-3">Why Buy From Renvik</div>
               <h2 className="text-4xl md:text-5xl font-bold text-white font-headline leading-tight">
-                Why Businesses<br/><span className="text-[#6495ED]">Choose Us</span>
+                Why Businesses<br /><span className="text-[#6495ED]">Choose Us</span>
               </h2>
             </div>
             <p className="text-blue-100/80 text-lg max-w-md mt-6 md:mt-0">
               Partner with a trusted name in the equipment rental industry. We deliver quality, reliability, and value at every step of your project.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {service.whyChooseUs.map((point: any, index: number) => {
               const IconComponent = point.icon || CheckCircle2;
               return (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all shadow-lg"
-              >
-                <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-xl bg-white/20 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-inner">
-                    <IconComponent className="w-7 h-7 text-white" />
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all shadow-lg"
+                >
+                  <div className="flex items-start gap-5">
+                    <div className="w-14 h-14 rounded-xl bg-white/20 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-inner">
+                      <IconComponent className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">{point.title}</h4>
+                      <p className="text-blue-100/90 text-base leading-relaxed">{point.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2">{point.title}</h4>
-                    <p className="text-blue-100/90 text-base leading-relaxed">{point.desc}</p>
-                  </div>
-                </div>
-              </motion.div>
-            )})}
+                </motion.div>
+              )
+            })}
           </div>
-          
+
           {/* Screenshot CTA Match */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -252,7 +253,7 @@ export const ServiceDetails = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-              <a 
+              <a
                 href={`https://wa.me/971555853160?text=${encodeURIComponent(`Hello, I am interested in getting a quote for your ${service.title} services.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -261,7 +262,7 @@ export const ServiceDetails = () => {
                 GET QUOTE
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a 
+              <a
                 href={`https://wa.me/971555853160?text=${encodeURIComponent(`Hello, I am interested in your ${service.title} services.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -279,20 +280,18 @@ export const ServiceDetails = () => {
       {/* Renvik Guarantee Section (Moved to Bottom) */}
       <section className="py-16 bg-white relative z-20">
         <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-surface p-10 md:p-12 rounded-[3rem] border border-outline-variant/30 text-center relative overflow-hidden shadow-sm"
           >
-            <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent">
+            {/* <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent">
               <ShieldCheck className="w-10 h-10" />
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 font-headline">
-              The Renvik Guarantee
-            </h3>
+            </div> */}
+            <img src="/images/logo.webp" alt="Renvik Logo" className="h-20 md:h-24 w-auto mx-auto mb-3" />
             <p className="text-secondary text-lg max-w-3xl mx-auto leading-relaxed">
-              All our services are backed by our uncompromising commitment to safety, regular preventive maintenance, and 24/7 professional technical support.
+              All our services are backed by our uncompromising commitment to safety, regular preventive maintenance, and professional technical support.
             </p>
           </motion.div>
         </div>
