@@ -1,7 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  CheckCircle2, PhoneCall, ArrowRight, ShieldCheck,
+  CheckCircle2, PhoneCall, ArrowRight,
   Calendar, Zap, Wrench, TrendingUp,
   DollarSign, Wallet, Headphones, RefreshCw,
   Truck, Layers, Users, Briefcase,
